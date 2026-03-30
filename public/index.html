@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homemade decor</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif
+        }
+
+        header {
+            height: 65px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .title,
+        .nav_links {
+            margin: 0px 100px;
+        }
+
+        header .title {
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        nav span {
+            opacity: 0.8;
+            margin: 0 10px;
+        }
+
+        nav button {
+            border: 1px solid gray;
+            background-color: transparent;
+            padding: 0px 13px;
+            height: 35px;
+            border-radius: 10px;
+
+        }
+        nav button:hover{
+            
+            border: 1px solid #BB6B25;
+            background-color: #BB6B25;
+            color: white;   
+        }
+
+        .hero_container {
+            height: 530px;
+            width: 100vw;
+            background-image: url('../assets/img/image.png');
+
+            /* background-repeat: no-repeat; */
+            background-position: center;
+            background-size: cover;
+            /* object-fit: cover; */
+
+
+
+
+        }
+
+        .continer {
+            height: 550px;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.6);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container_text {
+            height: 400px;
+            width: 600px;
+
+        }
+
+        .container_text h1 {
+            font-size: 70px;
+            font-weight: 700;
+            color: rgb(251, 249, 244);
+        }
+
+        .container_text .title {
+            font-size: 15px;
+            color: rgba(251, 249, 244, 0.8);
+
+        }
+
+        .container_text .description {
+            font-size: 20px;
+            line-height: 28px;
+            color: rgba(251, 249, 244, 0.8);
+        }
+
+        .container_text button {
+            padding: 16px 32px;
+            border: none;
+            background-color: #BB6B25;
+            border-radius: 10px;
+            margin: 20px 0;
+            color: white;
+            font-size: 20px;
+        }
+
+        .container_text button:hover {
+            background-color: #da7a27;
+        }
+
+        .decor {
+            background-color: #F7F3ED;
+            height: 400px;
+            /* border: 1px solid black; */
+        }
+
+        .decor .content {
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .content .title {
+            /* border: 1px solid red; */
+            font-size: 36px;
+            line-height: 40px;
+            font-weight: 600;
+        }
+
+        .decor .three_icons {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            margin: 20px 40px;
+        }
+
+        .three_icons span {
+            color: #847062;
+            font-size: 18px;
+        }
+
+        .three_icons i {
+            /* border: 1px solid #BB6B25; */
+            padding: 13px 15px;
+            border-radius: 10px;
+            font-size: 40px;
+            color: #BB6B25;
+        }
+
+        /* Collection  */
+
+        .collection {
+            padding: 100px 0;
+        }
+
+        .collection .title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .collection .container {
+            height: 450px;
+            padding: 70px 150px;
+            /* border: 1px solid red; */
+        }
+
+        #left_banner {
+            border-radius: 13px;
+            float: left;
+            height: 450px;
+            box-shadow: 2px 2px 8px 2px #BB6B25;
+
+        }
+
+        .right_panel {
+            padding: 100px 10px;
+            margin-left: 500px;
+
+
+        }
+       
+        #right_banner {
+            border-radius: 13px;
+            height: 450px;
+            float: right;
+            box-shadow: 2px 2px 8px 2px #BB6B25;
+        }
+
+        .left_panel {
+           padding: 100px 10px;
+           margin-right: 600px;
+           text-align: right;
+        }
+         .collection .container h1{
+            color: rgb(46, 34, 25);
+            /* text-shadow: 1px 2px 2px #BB6B25; */
+        }
+        .collection .container p {
+            margin: 10px 0;
+            color: #847062;
+            line-height: 22px;
+        }
+        .collection .container button {
+            border: none;
+            color: #BB6B25;
+            background-color: transparent;
+            font-size: 17px;
+            text-align: center;
+        }
+        .collection .container button:hover
+         {
+            text-decoration: underline;
+    
+         }
+         /* shop now section */
+         .shop_now {
+            color: white;
+            height: 350px;
+            background-color: #BB6B25;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+         }
+         .data {
+            /* border: 1px solid red; */
+            padding: 20px;
+            text-align: center;
+         }
+        .data h1 {
+            font-size: 38px;
+            margin: 10px;
+         }
+         .data p {
+            margin: 10px;
+            font-size: 22px;
+         }
+         .data button {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 13px;
+            border: none;
+            font-size: 18px;
+            color: #BB6B25;
+            font-weight: 600;
+            border: 1px solid #BB6B25;
+         }
+          .data button:hover{
+            color: white;
+            background-color: #BB6B25;
+            border: 1px solid white;
+          }
+         footer
+         {
+            padding: 80px 150px;
+            text-align: center;
+            background-color: #2E2219;
+            color: white;
+            margin: 10px;
+           
+         }  
+         footer p:nth-child(1){
+            font-size: 22px;
+            padding: 10px;
+         }
+         footer p:nth-child(2){
+            font-size: 19px;
+            color: #BDB7B2;
+            padding: 10px;
+         }
+         footer p:nth-child(3){
+            font-size: 17px;
+            color: #BDB7B2;
+            padding: 10px;
+         }
+
+         
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            Lokar Decor
+        </div>
+        <div class="nav_links">
+            <nav>
+                <span>Home</span>
+                <span>Gallery</span>
+                <button><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;Sign-in</button>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="hero_container">
+            <div class="continer">
+                <div class="container_text">
+                    <p class="title">Handcrafted with Love</p>
+                    <h1>Where Tradition Meets Your Doorstep</h1>
+                    <p class="description">Discover artisanal Lokar-inspired home decor; from vibrant toran hangings to
+                        cheerful sunflower cotton accents; each piece lovingly handmade to bring warmth and character to
+                        your space.</p>
+                    <button>Explore the Collection</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="decor">
+            <div class="content">
+                <div class="title">
+                    <span> Why You'll Love Our Decor</span>
+                </div>
+
+                <div class="three_icons">
+                    <span>
+                        <div>
+                            <i class="bi bi-person-heart"></i>
+                        </div>
+                        Every piece shaped by hand — no <br>two are exactly alike.
+                    </span>
+                    <span>
+                        <div>
+                            <i class="bi bi-house-heart-fill"></i>
+                        </div>
+                        Rooted in Lokar tradition, <br>designed for modern homes.
+                    </span>
+                    <span>
+                        <div>
+                            <i class="bi bi-leaf-fill"></i>
+                        </div>
+                        Made with natural cotton, wool, <br>and sustainably sourced materials.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="collection">
+            <div class="title">
+                Our Collections
+            </div>
+            <div class="container">
+                    <img id="left_banner" width="450px" src="../assets/img/image2.png" alt="">
+                    <div class="right_panel">
+                        <h1>Lokar Toran Designs</h1>
+                        <p>Welcome guests with color and joy. Our Lokar torans feature hand-tied pom poms, delicate
+                            beadwork, and vibrant wool florals — a beautiful nod to tradition that brightens every
+                            doorway.</p>
+                        <button>View Collection&nbsp; <i class="bi bi-arrow-right"></i></button>
+                    </div>
+            
+            </div>
+            <div class="container">
+                    <img id="right_banner" width="450px" src="../assets/img/image3.jpg" alt="">
+                    <div class="left_panel">
+                        <h1>Sunflower Cotton Decor</h1>
+                        <p>Bring a little sunshine indoors. From embroidered cushion covers to hand-stitched table runners, our sunflower cotton collection wraps your home in cheerful, natural warmth.</p>
+                        <button>View Collection&nbsp; <i class="bi bi-arrow-right"></i></button>
+                    </div>
+            
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+    <section>
+        <div class="shop_now">
+            <div class="data">
+                <h1>
+                    Ready to Add a Touch of Handmade?
+                </h1>
+                <p>
+                    Browse our full collection and find the perfect piece for your home.
+                </p>
+                <button><i class="bi bi-bag-heart"></i>&nbsp;&nbsp;Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Lokar Handmade Decor</p>
+        <p>Crafted with love · Rooted in tradition · Made for your home</p>
+        <p>© 2026 Lokar Decor. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
